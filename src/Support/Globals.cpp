@@ -1,9 +1,10 @@
-/*
- * Filename    Globals.cpp
- * Author      Erik Ström
- * Date        October 2017
- * Version     0.1
-*/
+/**
+ * @file Globals.cpp
+ * @author Erik Ström
+ * @brief Declaration of global variables
+ * @version 0.1
+ * @date 2018-10-29
+ */
 
 #include "Support/Globals.h"
 
