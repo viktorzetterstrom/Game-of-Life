@@ -1,9 +1,10 @@
-/*
- * Filename    ScreenPrinter.cpp
- * Author      Erik Ström
- * Date        October 2017
- * Version     0.1
-*/
+/**
+ * @file ScreenPrinter.cpp
+ * @author Erik Ström
+ * @brief Implementation of ScreenPrinter
+ * @version 0.1
+ * @date 2018-10-29
+ */
 
 #include "ScreenPrinter.h"
 #include <iostream>
@@ -72,6 +73,5 @@ void ScreenPrinter::printMessage(string message) {
 
 // Clears the terminal
 void ScreenPrinter::clearScreen() {
-
     terminal.clear();
 }
