@@ -1,9 +1,10 @@
-/*
- * Filename    FileLoader.h
- * Author      Erik Ström
- * Date        October 2017
- * Version     0.1
-*/
+/**
+ * @file FileLoader.h
+ * @author Erik Ström
+ * @brief Declaration of FileLoader
+ * @version 0.1
+ * @date 2018-10-29
+ */
 
 #ifndef FileLoaderH
 #define FileLoaderH
@@ -14,17 +15,25 @@
 
 using namespace std;
 
-/*
-Determines starting values for simulation, based on contents of specified file.
-
-Reads startup values from specified file, containing values for WORLD_DIMENSIONS and cell Population.
-Will create the corresponding cells.
-*/
+/**
+ * @class FileLoader 
+ * @brief Determines starting values for simulation, based on contents of specified file.
+ * @details Reads startup values from specified file, containing values for WORLD_DIMENSIONS and cell Population. Will create the corresponding cells.
+ */
 class FileLoader {
 
 public:
+    /**
+     * @brief Empty constructor
+     */
     FileLoader() {}
 
+    /**
+     * @brief Loads a population seed from a file.
+     * @details Stores the population seed in a referenced std::map with mapping Point -> Cell
+     * 
+     * @param cells Reference to a std::map with cells mapped to points.
+     */
     void loadPopulationFromFile(map<Point, Cell>& cells);
 
 };
