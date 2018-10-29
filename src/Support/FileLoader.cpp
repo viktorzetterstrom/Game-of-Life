@@ -1,9 +1,10 @@
-/*
- * Filename    FileLoader.cpp
- * Author      Erik Ström
- * Date        October 2017
- * Version     0.1
-*/
+/**
+ * @file FileLoader.cpp
+ * @author Erik Ström
+ * @brief Implementation of FileLoader
+ * @version 0.1
+ * @date 2018-10-29
+ */
 
 #include "Support/FileLoader.h"
 #include <fstream>
