@@ -1,9 +1,10 @@
-/*
- * Filename    Cell.cpp
- * Author      Erik Ström
- * Date        October 2017
- * Version     0.1
-*/
+/**
+ * @file Cell.cpp
+ * @author Erik Ström
+ * @brief 
+ * @version 0.1
+ * @date 2018-10-30
+ */
 #include "Cell_Culture/Cell.h"
 
 // Constructor that determines the cell's starting values.
