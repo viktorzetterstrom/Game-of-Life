@@ -15,6 +15,12 @@
 using namespace std;
 
 /**
+ * @addtogroup Globals Global variables
+ * @brief Global variables used in the application.
+ * @{
+ */
+
+/**
  * @brief The actual width and height of the used world
  */
 extern Dimensions WORLD_DIMENSIONS;
@@ -23,6 +29,6 @@ extern Dimensions WORLD_DIMENSIONS;
  * @brief Name of file to read from when using external population seed.
  */
 extern string fileName;
-
+/** @} */
 
 #endif

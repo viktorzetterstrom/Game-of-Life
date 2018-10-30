@@ -10,6 +10,13 @@
 
 #include "RuleOfExistence.h"
 
+/**
+ * @addtogroup Rules Rule functions
+ * @brief Functions that decide the rules with which the simulation is run.
+ * @{
+ */
+
+
 /*
 Erik's RuleOfExistence, based on Conway's rule while also differentiate the appearance of cells based on their age.
 
@@ -39,5 +46,6 @@ public:
 
     void executeRule();
 };
+/** @} */
 
 #endif //GAMEOFLIFE_RULEOFEXISTENCE_ERIK_H

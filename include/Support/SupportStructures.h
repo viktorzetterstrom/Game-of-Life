@@ -10,6 +10,13 @@
 #define GAMEOFLIFE_SUPPORTSTRUCTURES_H
 
 /**
+ * @addtogroup Structs Data structures
+ * @brief structs used in the application to group data together.
+ * @{
+ */
+
+/**
+ * @struct Point
  * @brief Constitues a single Point in the simulated world.
  * @details The Point structure handles x and y (column/row) coordinates in the world of Game of life, and is used to map Cell objects to their positions.
  */
@@ -55,7 +62,7 @@ struct Dimensions {
      * @brief Height stored as integer.
      */
     int HEIGHT;
-};
+};/** @} */
 
 
 #endif //GAMEOFLIFE_SUPPORTSTRUCTURES_H
