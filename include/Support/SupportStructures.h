@@ -1,13 +1,19 @@
 /**
- * @file SupportStructurs.h
+ * @file SupportStructures.h
  * @author Erik Ström
- * @brief Various supportive structures to be used throughout the application!
+ * @brief Various supportive structures to be used throughout the application
  * @version 0.1
  * @date 2018-10-29
  */
 
 #ifndef GAMEOFLIFE_SUPPORTSTRUCTURES_H
 #define GAMEOFLIFE_SUPPORTSTRUCTURES_H
+
+/**
+ * @addtogroup Structs Data structures
+ * @brief structs used in the application to group data together.
+ * @{
+ */
 
 /**
  * @struct Point
@@ -44,7 +50,6 @@ struct Point {
 };
 
 /**
- * @struct Dimensions
  * @brief Data structure storing dimensions as width and height.
  */
 struct Dimensions {
@@ -57,7 +62,7 @@ struct Dimensions {
      * @brief Height stored as integer.
      */
     int HEIGHT;
-};
+};/** @} */
 
 
 #endif //GAMEOFLIFE_SUPPORTSTRUCTURES_H

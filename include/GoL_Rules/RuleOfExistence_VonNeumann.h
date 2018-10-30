@@ -9,6 +9,14 @@
 #define GAMEOFLIFE_RULEOFEXISTENCE_VONNEUMANN_H
 
 #include "RuleOfExistence.h"
+
+/**
+ * @addtogroup Rules Rule functions
+ * @brief Functions that decide the rules with which the simulation is run.
+ * @{
+ */
+
+
 /*
 Von Neumann's RuleOfExistence, differs from Conway in that only 4 neighbours are accounted for.
 
@@ -26,5 +34,6 @@ public:
 
     void executeRule();
 };
+/** @} */
 
 #endif //GAMEOFLIFE_RULEOFEXISTENCE_VONNEUMANN_H

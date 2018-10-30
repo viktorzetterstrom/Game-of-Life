@@ -1,7 +1,7 @@
 /**
  * @file MainArguments.h
  * @author Erik Ström
- * @brief 
+ * @brief Declaration of BaseArgument, its child classes and ApplicationValues
  * @version 0.1
  * @date 2018-10-29
  */
@@ -17,13 +17,39 @@
 using namespace std;
 
 /**
+ * @addtogroup Structs Data structures
+ * @brief structs used in the application to group data together.
+ * @{
+ */
+
+/**
+ * 
  * @brief Stores simulation settings.
  */
 struct ApplicationValues {
+    /**
+     * @brief Decides if the simulation is to run.
+     */
     bool runSimulation = true;
+
+    /**
+     * @brief Name of rules to be carried out in even and odd generations.
+     */
     string evenRuleName, oddRuleName;
+
+    /**
+     * @brief Number of generations to simulate before stop.
+     */
     int maxGenerations = 100;
 };
+/** @} */
+
+/**
+ * @addtogroup Arguments Argument classes
+ * @brief Classes that handles the command line arguments supplied by
+ *  the user.
+ * @{
+ */
 
 /**
  * @brief Virtual baseclass for arguments
@@ -223,6 +249,6 @@ public:
      * @param oddRule Name of rule to be used.
      */
     void execute(ApplicationValues& appValues, char* oddRule);
-};
+};/** @} */
 
 #endif //GAMEOFLIFE_MAINARGUMENTS_H

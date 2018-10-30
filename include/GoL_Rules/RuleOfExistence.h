@@ -14,6 +14,14 @@
 #include "Support/Globals.h"
 using namespace std;
 
+
+/**
+ * @addtogroup Rules Rule functions
+ * @brief Functions that decide the rules with which the simulation is run.
+ * @{
+ */
+
+
 /*
 These rules lies at the heart
 of the simulation, and determines the fate of each cell in the world population.
@@ -74,5 +82,7 @@ public:
 
     string getRuleName() { return ruleName; }
 };
+
+/** @} */
 
 #endif

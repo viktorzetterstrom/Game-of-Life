@@ -1,9 +1,11 @@
-/*
- * Filename    GameOfLife.cpp
- * Author      Erik Ström
- * Date        October 2017
- * Version     0.1
-*/
+/**
+ * @file GameOfLife.cpp
+ * @author Erik Ström
+ * @brief Implementation of GameOfLife, main simulation class
+ * @version 0.1
+ * @date 2018-10-30
+ * @copyright Copyright (c) 2018
+ */
 
 #include "GameOfLife.h"
 #include <thread>

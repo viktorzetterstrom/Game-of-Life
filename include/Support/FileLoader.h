@@ -16,7 +16,6 @@
 using namespace std;
 
 /**
- * @class FileLoader 
  * @brief Determines starting values for simulation, based on contents of specified file.
  * @details Reads startup values from specified file, containing values for WORLD_DIMENSIONS and cell Population. Will create the corresponding cells.
  */

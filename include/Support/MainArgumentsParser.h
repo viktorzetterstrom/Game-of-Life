@@ -18,7 +18,6 @@ using namespace std;
 
 
 	/**
-	  *@class MainArgumentParser
 	  *@brief Class which parses the arguments passed by the user
 	  *@details The arguments are provided by the user before the launch of the program. The -h argument will show the arguments
 	  *@test Argument -h should be able  to parse all arguments by using ScreenPrinter::printHelpScreen() 
