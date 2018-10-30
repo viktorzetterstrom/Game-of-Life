@@ -1,9 +1,9 @@
-/*
- * Filename    RuleOfExistence_Conway.cpp
- * Author      Erik Ström
- * Date        October 2017
- * Version     0.1
-*/
+/**
+  * @file RuleOfExistence_Conway.cpp
+  * @author Erik Ström
+  * @date October 2017
+  * @version 0.1
+  */
 
 #include "GoL_Rules/RuleOfExistence_Conway.h"
 
