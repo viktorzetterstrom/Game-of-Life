@@ -1,7 +1,7 @@
 /**
  * @file MainArguments.cpp
  * @author Erik Ström
- * @brief 
+ * @brief Implementation of BaseArgument and its child classes.
  * @version 0.1
  * @date 2018-10-29
  */

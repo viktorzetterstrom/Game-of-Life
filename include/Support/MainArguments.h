@@ -1,7 +1,7 @@
 /**
  * @file MainArguments.h
  * @author Erik Ström
- * @brief 
+ * @brief Declaration of BaseArgument, its child classes and ApplicationValues
  * @version 0.1
  * @date 2018-10-29
  */
