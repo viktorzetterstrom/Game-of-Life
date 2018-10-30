@@ -1,9 +1,10 @@
-/*
- * Filename    RuleFactory.cpp
- * Author      Erik Ström
- * Date        October 2017
- * Version     0.1
-*/
+/**
+ * @file RuleFactory.cpp
+ * @author Erik Ström
+ * @brief Implementation of RuleFactory, class that handles RulesOfExistence.
+ * @version 0.1
+ * @date 2018-10-30
+ */
 
 #include "GoL_Rules/RuleFactory.h"
 #include "GoL_Rules/RuleOfExistence_Conway.h"
