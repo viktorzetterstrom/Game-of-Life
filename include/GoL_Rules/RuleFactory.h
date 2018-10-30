@@ -10,6 +10,12 @@
 
 #include "GoL_Rules/RuleOfExistence.h"
 
+/**
+ * @addtogroup Rules Rule functions
+ * @brief Functions that decide the rules with which the simulation is run.
+ * @{
+ */
+
 // Singleton class to handle creation of RulesOfExistence objects.
 class RuleFactory
 {
@@ -20,5 +26,7 @@ public:
     static RuleFactory& getInstance();
     RuleOfExistence* createAndReturnRule(map<Point, Cell>& cells, string ruleName = "conway");
 };
+
+/** @} */
 
 #endif

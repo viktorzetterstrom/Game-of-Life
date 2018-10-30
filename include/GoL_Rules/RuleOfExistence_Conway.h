@@ -9,6 +9,14 @@
 #define GAMEOFLIFE_RULEOFEXISTENCE_CONWAY_H
 
 #include "RuleOfExistence.h"
+
+/**
+ * @addtogroup Rules Rule functions
+ * @brief Functions that decide the rules with which the simulation is run.
+ * @{
+ */
+
+
 /*
 Conway's RuleOfExistence, applying actions based on PopulationLimits on all 8 surrounding neighbours.
 
@@ -31,5 +39,6 @@ public:
 
     void executeRule();
 };
+/** @} */
 
 #endif //GAMEOFLIFE_RULEOFEXISTENCE_CONWAY_H
