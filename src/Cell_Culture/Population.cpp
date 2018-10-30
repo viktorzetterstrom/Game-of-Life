@@ -1,9 +1,11 @@
-/*
- * Filename    Population.cpp
- * Author      Erik Ström
- * Date        October 2017
- * Version     0.1
-*/
+/**
+ * @file Population.cpp
+ * @author Erik Ström
+ * @brief Implementation of Population.
+ * @version 0.1
+ * @date 2018-10-30
+ */
+
 
 #include "Cell_Culture/Population.h"
 #include "GoL_Rules/RuleFactory.h"
