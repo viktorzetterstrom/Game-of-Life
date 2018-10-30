@@ -1,7 +1,8 @@
 /**
  * @file Population.cpp
  * @author Erik Ström
- * @brief Implementation of Population.
+ * @brief Implementation of Population, class that represents all the cells in
+ *  the game.
  * @version 0.1
  * @date 2018-10-30
  */

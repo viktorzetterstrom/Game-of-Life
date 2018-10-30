@@ -1,7 +1,8 @@
 /**
  * @file ScreenPrinter.cpp
  * @author Erik Ström
- * @brief Implementation of ScreenPrinter
+ * @brief Implementation of ScreenPrinter, class that handles output to screen.
+ * @ details: Uses submodule terminal to print simulation in the terminal.
  * @version 0.1
  * @date 2018-10-29
  */

@@ -1,7 +1,7 @@
 /**
  * @file GameOfLife.cpp
  * @author Erik Ström
- * @brief Implementation of GameOfLife, main simulation class
+ * @brief Implementation of GameOfLife, main simulation class.
  * @version 0.1
  * @date 2018-10-30
  * @copyright Copyright (c) 2018

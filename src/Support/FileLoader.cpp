@@ -1,7 +1,8 @@
 /**
  * @file FileLoader.cpp
  * @author Erik Ström
- * @brief Implementation of FileLoader
+ * @brief Implementation of FileLoader, class for loading cell population from 
+ *  file.
  * @version 0.1
  * @date 2018-10-29
  */

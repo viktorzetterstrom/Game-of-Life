@@ -1,7 +1,8 @@
 /**
  * @file Population.h
  * @author Erik Ström
- * @brief Definition of Population.
+ * @brief Definition of Population, class that represents all the cells in the 
+ *  game.
  * @version 0.1
  * @date 2018-10-30
  */
@@ -19,10 +20,11 @@
 using namespace std;
 
 /**
- * @brief Representation of the complete society of cell existance and interactions.
+ * @brief Representation of the complete society of cell existance and 
+ * interactions.
  * 
  * @details The Population constitutes of all current, previous and future 
- *  generations of cells, both living and dead as well as those not yet born. By 
+ *  generations of cells, both living and dead as well as those not yet born. By
  *  mapping all cells to their respective positions in the simulation world, 
  *  Population has the complete knowledge of each cell's whereabouts. 
  *  Furthermore, the class is responsible for determining which rules should be 
@@ -69,14 +71,14 @@ private:
 
 public:
     /**
-     * @brief Constructor
+     * @brief Constructor of Population.
      * @details Sets generation to zero and sets even- and odd rule of existence
      *  to nullptr.
      */
     Population() : generation(0), evenRuleOfExistence(nullptr), oddRuleOfExistence(nullptr) {}
     
     /**
-     * @brief Destructor
+     * @brief Destructor of Population.
      */
     ~Population();
 

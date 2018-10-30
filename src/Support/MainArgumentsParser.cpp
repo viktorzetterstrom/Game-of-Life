@@ -1,10 +1,10 @@
 /**
-* @file MainArgumentsParser.cpp
-* @author Erik Ström
-* @brief Static functions that parses the starting arguments for the application.
-* @version 0.1
-* @date 2018-10-29
-*/
+ * @file MainArgumentsParser.cpp
+ * @author Erik Ström
+ * @brief Static functions that parses the starting arguments for the application.
+ * @version 0.1
+ * @date 2018-10-29
+ */
 
 #include "ScreenPrinter.h"
 #include "Support/MainArgumentsParser.h"

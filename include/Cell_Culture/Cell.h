@@ -1,7 +1,7 @@
 /**
  * @file Cell.h
  * @author Erik Ström
- * @brief 
+ * @brief Definition of Cell, class that represents a cell in the Game of Life.
  * @version 0.1
  * @date 2018-10-30
  */
@@ -13,6 +13,7 @@
 
 /**
  * @brief Data structure holding colors to visualize the state of cells.
+ * @details The color enum is defined in the submodule terminal.
  */
 struct StateColors {
     COLOR LIVING, // Representing living cell
@@ -84,9 +85,10 @@ private:
 
     /**
      * @brief Set the color property of CellDetails to color.
-     * @todo remove this->, to use consequent syntax for all set-functions.
      * 
      * @param color Color to be used.
+     * 
+     * @todo remove this->, to use consequent syntax for all set-functions.
      */
     void setColor(COLOR color) { this->details.color = color; }
 
