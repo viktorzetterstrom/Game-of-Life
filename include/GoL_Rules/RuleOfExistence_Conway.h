@@ -17,7 +17,6 @@
  * @{
  */
 
-
 /*
 Conway's RuleOfExistence, applying actions based on PopulationLimits on all 8 surrounding neighbours.
 
@@ -59,7 +58,7 @@ public:
     ~RuleOfExistence_Conway() {}
 
     /**
-     * @brief Execute rule specific for Conway
+     * @brief Execute the rule specific for Conway
      * @details decides rules and executes them for all non rim cells
      * and sets right colors depending on cells state
      * @test should determine what the next action should be for the cells
