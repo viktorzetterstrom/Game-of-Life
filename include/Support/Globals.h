@@ -19,7 +19,6 @@ using namespace std;
  */
 extern Dimensions WORLD_DIMENSIONS;
 
-// Name of file to read
 /**
  * @brief Name of file to read from when using external population seed.
  */

@@ -14,7 +14,6 @@
 #include "Cell_Culture/Population.h"
 
 /**
- * @class ScreenPrinter
  * @brief Responsible for visually representing the simulation world on screen
  * @details Singleton class that uses a Terminal object from submodule Terminal to visually represent the simulation.
  */
