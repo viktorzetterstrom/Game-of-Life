@@ -1,7 +1,7 @@
 /**
  * @file Globals.cpp
  * @author Erik Ström
- * @brief Declaration of global variables
+ * @brief Declaration of global variables.
  * @version 0.1
  * @date 2018-10-29
  */

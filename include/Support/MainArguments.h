@@ -1,7 +1,7 @@
 /**
  * @file MainArguments.h
  * @author Erik Ström
- * @brief Declaration of BaseArgument, its child classes and ApplicationValues
+ * @brief Declaration of command-line argument handlers and ApplicationValues.
  * @version 0.1
  * @date 2018-10-29
  */
@@ -23,12 +23,11 @@ using namespace std;
  */
 
 /**
- * 
  * @brief Stores simulation settings.
  */
 struct ApplicationValues {
     /**
-     * @brief Decides if the simulation is to run.
+     * @brief Decides if the simulation is to run. True equals simulation runs.
      */
     bool runSimulation = true;
 
@@ -60,12 +59,12 @@ struct ApplicationValues {
 class BaseArgument {
 protected:
     /**
-     * @brief Contains the value of the argument
+     * @brief Contains the value of the argument.
      */
     const string argValue;
 
     /**
-     * @brief informs the user that no value was provided for the argument
+     * @brief informs the user that no value was provided for the argument.
      */
     void printNoValue();
 
@@ -73,19 +72,19 @@ public:
     /**
      * @brief Construct a new BaseArgument object, argValue is assigned.
      * 
-     * @param argValue std::string with argument value
+     * @param argValue std::string with argument value.
      */
     BaseArgument(string argValue) : argValue(argValue) {}
 
     /**
-     * @brief Virtual destructor
+     * @brief Virtual destructor.
      */
     virtual ~BaseArgument() {}
 
     /**
-     * @brief Makes changes ApplicationValues based on the arguments provided
+     * @brief Makes changes ApplicationValues based on the arguments provided.
      * 
-     * @param appValues Reference to an ApplicationValues struct
+     * @param appValues Reference to an ApplicationValues struct.
      * @param value The value provided for the argument.
      */
     virtual void execute(ApplicationValues& appValues, char* value = nullptr) = 0;
@@ -93,7 +92,7 @@ public:
     /**
      * @brief Returns the value of the argument 
      * 
-     * @return const string& Reference to argValue
+     * @return const string& Reference to argValue.
      */
     const string& getValue() { return argValue; } 
 };
@@ -104,17 +103,17 @@ public:
 class HelpArgument : public BaseArgument {
 public:
     /**
-     * @brief Constructor
+     * @brief Constructor of HelpArgument.
      */
     HelpArgument() : BaseArgument("-h") {}
     /**
-     * @brief Destructor
+     * @brief Destructor of HelpArgument.
      */
     ~HelpArgument() {}
 
     /**
      * @brief Displays the user help and quits the application.
-     * @details Runs printHelpScreen of ScreenPrinter and then returns, 
+     * @details Runs printHelpScreen of ScreenPrinter and then returns,
      *  simulation is not run.
      * 
      * @param appValues Reference to an ApplicationValues struct
@@ -129,11 +128,11 @@ public:
 class GenerationsArgument : public BaseArgument {
 public:
     /**
-     * @brief Constructor
+     * @brief Constructor of GenerationsArgument.
      */
     GenerationsArgument() : BaseArgument("-g") {}
     /**
-     * @brief Destructor
+     * @brief Destructor of GenerationsArgument.
      */
     ~GenerationsArgument() {}
 
@@ -155,11 +154,11 @@ public:
 class WorldsizeArgument : public BaseArgument {
 public:
     /**
-     * @brief Constructor
+     * @brief Constructor of WorldsizeArgument.
      */
     WorldsizeArgument() : BaseArgument("-s") {}
     /**
-     * @brief Destructor
+     * @brief Destructor of WorldsizeArgument.
      */
     ~WorldsizeArgument() {}
 
@@ -169,7 +168,7 @@ public:
      *  dimensions are provided printNoValue is run and the simulation does not
      *  start.
      * 
-     * @param appValues Reference to an ApplicationValues struct
+     * @param appValues Reference to an ApplicationValues struct.
      * @param dimensions Size of the simulation world in the format 
      *  width x height. Standard is (80x24).
      */
@@ -185,11 +184,11 @@ public:
 class FileArgument : public BaseArgument {
 public:
     /**
-     * @brief Constructor
+     * @brief Constructor of FileArgument.
      */
     FileArgument() : BaseArgument("-f") {}
     /**
-     * @brief Destructor
+     * @brief Destructor of FileArgument.
      */
     ~FileArgument() {}
 
@@ -199,8 +198,8 @@ public:
      *  This will make the simulation use that file as input when starting the
      *  simulation.
      * 
-     * @param appValues Reference to an ApplicationValues struct
-     * @param fileNameArg Population seed filename
+     * @param appValues Reference to an ApplicationValues struct.
+     * @param fileNameArg Population seed filename.
      */
     void execute(ApplicationValues& appValues, char* fileNameArg);
 };
@@ -211,18 +210,18 @@ public:
 class EvenRuleArgument : public BaseArgument {
 public:
     /**
-     * @brief Constructor
+     * @brief Constructor of EvenRuleArgument.
      */
     EvenRuleArgument() : BaseArgument("-er") {}
     /**
-     * @brief Destructor
+     * @brief Destructor  of EvenRuleArgument.
      */
     ~EvenRuleArgument() {}
 
     /**
      * @brief Sets a rule to be used for even generations only.
      * 
-     * @param appValues Reference to an ApplicationValues struct
+     * @param appValues Reference to an ApplicationValues struct.
      * @param evenRule Name of rule to be used.
      */
     void execute(ApplicationValues& appValues, char* evenRule);
@@ -234,11 +233,11 @@ public:
 class OddRuleArgument : public BaseArgument {
 public:
     /**
-     * @brief Constructor
+     * @brief Constructor of OddRuleArgument.
      */
     OddRuleArgument() : BaseArgument("-or") {}
     /**
-     * @brief Destructor
+     * @brief Destructor of OddRuleArgument.
      */
     ~OddRuleArgument() {}
 

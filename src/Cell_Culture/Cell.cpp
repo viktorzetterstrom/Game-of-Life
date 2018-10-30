@@ -1,7 +1,7 @@
 /**
  * @file Cell.cpp
  * @author Erik Ström
- * @brief 
+ * @brief Implementation of Cell, class that represents a cell in the Game of Life.
  * @version 0.1
  * @date 2018-10-30
  */

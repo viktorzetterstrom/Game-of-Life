@@ -9,7 +9,7 @@
 /**
  * @mainpage Game of Life
  * Implementation of 
- * <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">John Conways game of life</a>
+ * <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">John Conways Game of Life</a>
  * created by Erik Ström at Mittuniverstietet. Documentation and tests are
  * written by Visar Ferizi (vife1700) and Viktor Zetterström (vize1700).
  * 
