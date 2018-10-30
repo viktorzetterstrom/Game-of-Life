@@ -1,7 +1,7 @@
 /**
- * @file SupportStructurs.h
+ * @file SupportStructures.h
  * @author Erik Ström
- * @brief Various supportive structures to be used throughout the application!
+ * @brief Various supportive structures to be used throughout the application
  * @version 0.1
  * @date 2018-10-29
  */
@@ -10,7 +10,6 @@
 #define GAMEOFLIFE_SUPPORTSTRUCTURES_H
 
 /**
- * @struct Point
  * @brief Constitues a single Point in the simulated world.
  * @details The Point structure handles x and y (column/row) coordinates in the world of Game of life, and is used to map Cell objects to their positions.
  */
@@ -44,7 +43,6 @@ struct Point {
 };
 
 /**
- * @struct Dimensions
  * @brief Data structure storing dimensions as width and height.
  */
 struct Dimensions {
