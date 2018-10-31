@@ -35,6 +35,9 @@ public:
      *  Point -> Cell
      * 
      * @param cells Reference to a std::map with cells mapped to points.
+     * 
+     * @test Test loading files with correct syntax of different size. Also test
+     *  files with incorrect syntax, incorrect symbols and empty file.
      */
     void loadPopulationFromFile(map<Point, Cell>& cells);
 
