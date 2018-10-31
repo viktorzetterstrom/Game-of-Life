@@ -95,10 +95,16 @@ private:
 public:
 
     /**
-     * @brief Construct a new Cell object
+     * @brief Construct a new Cell object.
+     * @details Sets the starting values for the Cell. The default is a dead
+     *  cell with age 0 and value '#', this will change if ACTION is supplied at
+     *  construction.
      * 
      * @param isRimCell True if the cell is a rim cell, default is false.
      * @param action Specify an ACTION for the cell, default is DO_NOTHING.
+     * 
+     * @test Test that values are correctly assigned after construction. Both
+     *  default values and when specified.
      */
     Cell(bool isRimCell = false, ACTION action = DO_NOTHING);
 
@@ -109,6 +115,8 @@ public:
      * 
      * @return true If cell is not a rim cell and age is larger than zero.
      * @return false Otherwise.
+     * 
+     * @test Test that the function returns true when age is larger than zero.
      */
     bool isAlive();
 
@@ -117,6 +125,8 @@ public:
      * @details Does not work on rim cells.
      * 
      * @param action ACTION for next generation in the simulation.
+     * 
+     * @test Test that the function sets next ACTION correctly.
      */
     void setNextGenerationAction(ACTION action);
 
@@ -126,6 +136,8 @@ public:
      *  action is IGNORE_CELL it is kept alive and age is incremented. If the
      *  action is GIVE_CELL_LIFE the age is incremented given it is not a rim
      *  cell.
+     * 
+     * @test Test that state is correctly updated based on NextUpdate.
      */
     void updateState();
 
@@ -134,6 +146,8 @@ public:
      * @details Age is stored in CellDetails.
      * 
      * @return int Current cell age.
+     * 
+     * @Test that it returns correct age.
      */
     int getAge() { return details.age; }
 
@@ -142,6 +156,8 @@ public:
      * @details Color is stored in CellDetails
      * 
      * @return COLOR Current cell color.
+     * 
+     * @test Test that it returns correct color.
      */
     COLOR getColor() { return details.color; }
 
@@ -152,6 +168,8 @@ public:
      * 
      * @return true If cell is a rim cell.
      * @return false Otherwise.
+     * 
+     * @test Test that it correctly returns whether cell is a rim cell.
      */
     bool isRimCell() { return details.rimCell; }
 
@@ -159,6 +177,8 @@ public:
      * @brief Sets the color the cell will have after its next update.
      * 
      * @param nextColor Next color for cell.
+     * 
+     * @test Test that it correctly sets next color.
      */
     void setNextColor(COLOR nextColor) { this->nextUpdate.nextColor = nextColor; }
 
@@ -166,6 +186,8 @@ public:
      * @brief Returns the value of the cell.
      * 
      * @return char Current cell value.
+     * 
+     * @test Test that it returns correct value.
      */
     char getCellValue() { return details.value; }
 
@@ -174,6 +196,8 @@ public:
      *  to screen.
      * 
      * @param value Next cell value.
+     * 
+     * @test Test that it correctly sets next value.
      */
     void setNextCellValue(char value) { nextUpdate.nextValue = value; }
 
@@ -181,15 +205,19 @@ public:
      * @brief Sets whether the cell is alive/dead next generation.
      * 
      * @param isAliveNext true if alive, false if dead.
+     * 
+     * @test Test that it correctly sets if the cell will be alive next generation.
      */
     void setIsAliveNext(bool isAliveNext) { nextUpdate.willBeAlive = isAliveNext; }
 
-    // Will the cell be alive next generation?
     /**
      * @brief Returns true if the cell will be alive next generation.
      * 
      * @return true If willBeAlive in NextUpdate is true.
      * @return false Otherwise.
+     * 
+     * @test Test that it correctly returns whether cell will be alive next
+     *  generation.
      */
     bool isAliveNext() { return nextUpdate.willBeAlive; }
 
@@ -197,6 +225,8 @@ public:
      * @brief Returns the cells next action.
      * 
      * @return ACTION& Next cell action.
+     * 
+     * @test Test that it returns the next ACTION in the simulation correctly.
      */
     ACTION& getNextGenerationAction() { return nextUpdate.nextGenerationAction; }
 };
