@@ -28,7 +28,7 @@ SCENARIO("Using a Cell object") {
     THEN("Its color should be DEAD") {
       REQUIRE(cell.getColor() == STATE_COLORS.DEAD);
     }
-    THEN("The next action should be DO_NOTHINg") {
+    THEN("The next action should be DO_NOTHING") {
       REQUIRE(cell.getNextGenerationAction() == DO_NOTHING);
     }
 
@@ -121,6 +121,20 @@ SCENARIO("Using a rim cell") {
       THEN("The cell should not have aged") {
         REQUIRE(rimCell.getAge() == 0);
       }
+    }
+  }
+}
+
+// Scenario to check constructor working.
+SCENARIO("Using the constructor to create a living cell") {
+  GIVEN("We create a living cell") {
+    Cell cell(false, GIVE_CELL_LIFE);
+
+    THEN("It should be alive") {
+      REQUIRE(cell.isAlive() == true);
+    }
+    THEN("It should have alive color") {
+      REQUIRE(cell.getColor() == STATE_COLORS.LIVING);
     }
   }
 }
