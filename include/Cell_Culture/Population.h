@@ -91,6 +91,11 @@ public:
      * 
      * @param evenRuleName Rule for even generations.
      * @param oddRuleName Rule for odd generations (default is empty)
+     * 
+     * @test Test that the function correctly initializes the population given
+     *  the input. If rules are given they should be applied. If a filename for
+     *  an external population is given, that should be used. Otherwise the 
+     *  population should be randomized.
      */
     void initiatePopulation(string evenRuleName, string oddRuleName = "");
 
@@ -99,6 +104,9 @@ public:
      *  based on the rules of existence.
      * 
      * @return int Increments the generation counter.
+     * 
+     * @test See that it calculates next generation correctly based on a given
+     *  state and which rules are applied.
      */
     int calculateNewGeneration();
 
@@ -108,6 +116,8 @@ public:
      * 
      * @param position Cell position.
      * @return Cell& Reference to cell at position.
+     * 
+     * @test Test that it returns correct Cell.
      */
     Cell& getCellAtPosition(Point position) { return cells.at(position); }
 
@@ -115,6 +125,8 @@ public:
      * @brief Returns the total amount of cells in the population.
      * 
      * @return int Amount of cells in population.
+     * 
+     * @test Test that it returns the correct amount of cells.
      */
     int getTotalCellPopulation() { return cells.size(); }
 
