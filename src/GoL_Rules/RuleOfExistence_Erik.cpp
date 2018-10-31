@@ -1,9 +1,9 @@
-/*
- * Filename    RuleOfExistence_Erik.cpp
- * Author      Erik Ström
- * Date        October 2017
- * Version     0.1
-*/
+/**
+  * @file RuleOfExistence_Erik.cpp
+  * @author Erik Ström
+  * @date October 2017
+  * @version 0.1
+  */
 
 #include "GoL_Rules/RuleOfExistence_Erik.h"
 
@@ -33,7 +33,7 @@ void RuleOfExistence_Erik::executeRule() {
 
 
         // With age comes experience. Cells older than 5 generations recieves a cyan color.
-        // If the cell is older than 10 generations, it gets the value 'E' (for Erik) showing
+        // If the cell is older than 9 generations, it gets the value 'E' (for Erik) showing
         // its total awesomeness.
         erikfyCell(cell, action);
 
