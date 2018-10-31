@@ -138,6 +138,7 @@ public:
      *  cell.
      * 
      * @test Test that state is correctly updated based on NextUpdate.
+     * @todo Enumerate DO_NOTHING in switch case to cover all cases.
      */
     void updateState();
 
@@ -179,6 +180,7 @@ public:
      * @param nextColor Next color for cell.
      * 
      * @test Test that it correctly sets next color.
+     * @todo emove this->, to use consequent syntax for all set-functions.
      */
     void setNextColor(COLOR nextColor) { this->nextUpdate.nextColor = nextColor; }
 
