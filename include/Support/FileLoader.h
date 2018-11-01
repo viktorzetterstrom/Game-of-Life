@@ -42,7 +42,6 @@ public:
      *   start, throw error otherwise.
      */
     void loadPopulationFromFile(map<Point, Cell>& cells);
-
 };
 
 #endif

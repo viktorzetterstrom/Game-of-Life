@@ -41,6 +41,11 @@ enum ACTION { KILL_CELL, IGNORE_CELL, GIVE_CELL_LIFE, DO_NOTHING };
  * exempt from the game's rules, and thus their values may not be changed. The 
  * latter type, however, may be changed and editedin ways specified by the 
  * rules.
+ * 
+ * @todo Make sure details of rim cells cannot be changed by the member functions
+ *  and updateState(). As of now if action is GIVE_CELL_LIFE and rimCell is true
+ *  the rimcell will have color LIVING. Value and color can also be changed
+ *  of rim cells through the member functions.
  */
 class Cell {
 private:
@@ -138,6 +143,9 @@ public:
      *  cell.
      * 
      * @test Test that state is correctly updated based on NextUpdate.
+     * @todo Enumerate DO_NOTHING in switch case to cover all cases.
+     * @todo Make sure rim cell state is not updated. As of now value can be
+     *  changed.
      */
     void updateState();
 
@@ -179,6 +187,7 @@ public:
      * @param nextColor Next color for cell.
      * 
      * @test Test that it correctly sets next color.
+     * @todo Remove this->, to use consequent syntax for all set-functions.
      */
     void setNextColor(COLOR nextColor) { this->nextUpdate.nextColor = nextColor; }
 
