@@ -36,8 +36,10 @@ public:
      * 
      * @param cells Reference to a std::map with cells mapped to points.
      * 
-     * @todo Add more robust checks for files with bad input. As of now it can
-     *  not handle bad files.
+     * @test Test loading files with correct syntax of different size. Also test
+     *  files with incorrect syntax, incorrect symbols and empty file.
+     * @todo Add checks to ensure correct syntax is required for simulation to 
+     *   start, throw error otherwise.
      */
     void loadPopulationFromFile(map<Point, Cell>& cells);
 };
