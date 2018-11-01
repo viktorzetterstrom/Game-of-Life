@@ -207,6 +207,7 @@ public:
      * @param isAliveNext true if alive, false if dead.
      * 
      * @test Test that it correctly sets if the cell will be alive next generation.
+     * @todo This function is never used, consider deleting it.
      */
     void setIsAliveNext(bool isAliveNext) { nextUpdate.willBeAlive = isAliveNext; }
 
@@ -218,6 +219,7 @@ public:
      * 
      * @test Test that it correctly returns whether cell will be alive next
      *  generation.
+     * @todo This function is never used, consider deleting it.
      */
     bool isAliveNext() { return nextUpdate.willBeAlive; }
 

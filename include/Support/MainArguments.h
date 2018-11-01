@@ -93,6 +93,7 @@ public:
      * @brief Returns the value of the argument 
      * 
      * @return const string& Reference to argValue.
+     * 
      */
     const string& getValue() { return argValue; } 
 };
@@ -118,6 +119,8 @@ public:
      * 
      * @param appValues Reference to an ApplicationValues struct
      * @param value Argument value (not used in this child class)
+     * 
+     * @test Test that it correctly runs printHelpScreen.
      */
     void execute(ApplicationValues& appValues, char* value);
 };
@@ -144,6 +147,9 @@ public:
      * 
      * @param appValues Reference to an ApplicationValues struct
      * @param generations Number of generations to simulate. Standard is 100.
+     * 
+     * @test Test that it correctly changes the number of generations, by giving
+     *  some different inputs.
      */
     void execute(ApplicationValues& appValues, char* generations);
 };
@@ -171,6 +177,9 @@ public:
      * @param appValues Reference to an ApplicationValues struct.
      * @param dimensions Size of the simulation world in the format 
      *  width x height. Standard is (80x24).
+     * 
+     * @test Test that it correctly changes the dimensions by giving different
+     *  dimensions.
      */
     void execute(ApplicationValues& appValues, char* dimensions);
 };
@@ -200,6 +209,8 @@ public:
      * 
      * @param appValues Reference to an ApplicationValues struct.
      * @param fileNameArg Population seed filename.
+     * 
+     * @test Test that it sets the filename correctly.
      */
     void execute(ApplicationValues& appValues, char* fileNameArg);
 };
@@ -223,6 +234,8 @@ public:
      * 
      * @param appValues Reference to an ApplicationValues struct.
      * @param evenRule Name of rule to be used.
+     * 
+     * @test Test that it sets even rule correctly.
      */
     void execute(ApplicationValues& appValues, char* evenRule);
 };
@@ -246,6 +259,8 @@ public:
      * 
      * @param appValues Reference to an ApplicationValues struct
      * @param oddRule Name of rule to be used.
+     * 
+     * @test That it sets oddrule correctly.
      */
     void execute(ApplicationValues& appValues, char* oddRule);
 };/** @} */

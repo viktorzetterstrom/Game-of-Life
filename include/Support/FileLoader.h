@@ -38,6 +38,8 @@ public:
      * 
      * @test Test loading files with correct syntax of different size. Also test
      *  files with incorrect syntax, incorrect symbols and empty file.
+     * @todo Add checks to ensure correct syntax is required for simulation to 
+     *   start, throw error otherwise.
      */
     void loadPopulationFromFile(map<Point, Cell>& cells);
 
