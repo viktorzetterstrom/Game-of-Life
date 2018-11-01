@@ -20,7 +20,7 @@
 using namespace std;
 
 /**
- * @brief Representation of the complete society of cell existance and 
+ * @brief Representation of the complete society of cell existence and 
  * interactions.
  * 
  * @details The Population constitutes of all current, previous and future 

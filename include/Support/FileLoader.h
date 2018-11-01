@@ -35,9 +35,11 @@ public:
      *  Point -> Cell
      * 
      * @param cells Reference to a std::map with cells mapped to points.
+     * 
+     * @todo Add more robust checks for files with bad input. As of now it can
+     *  not handle bad files.
      */
     void loadPopulationFromFile(map<Point, Cell>& cells);
-
 };
 
 #endif
