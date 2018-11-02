@@ -34,13 +34,19 @@ void Cell::updateState() {
             break;
     }
 
-    // should the color be updated
-    if (details.color != nextUpdate.nextColor)
-        setColor(nextUpdate.nextColor);
+	if (!details.rimCell) //if not a rimcell
+	{
+		// should the color be updated
+		if (details.color != nextUpdate.nextColor)
+			setColor(nextUpdate.nextColor);
 
-    // should the value be updated
-    if (details.value != nextUpdate.nextValue)
-        setCellValue(nextUpdate.nextValue);
+		// should the value be updated
+		if (details.value != nextUpdate.nextValue)
+			setCellValue(nextUpdate.nextValue);
+	}
+	else
+	{
+		setColor(STATE_COLORS.DEAD);  //if rimcell
 
     this->nextUpdate.nextGenerationAction = DO_NOTHING;	// reset next action
 }
