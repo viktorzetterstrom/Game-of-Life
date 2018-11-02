@@ -1,6 +1,7 @@
 /**
  * @file test-main.cpp
- * @author Viktor Zetterström (vize1500@student.miun.se)
+ * @author Viktor Zetterström
+ * @author Visar Ferizi
  * @brief Main file for testing with catch.
  * @version 0.1
  * @date 2018-10-31

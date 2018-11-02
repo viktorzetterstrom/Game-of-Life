@@ -1,7 +1,11 @@
 /**
  * @file test-cell.cpp
- * @author Viktor Zetterström (vize1500@student.miun.se)
- * @brief Unit tests for the class Population.
+ * @author Viktor Zetterström
+ * @author Visar Ferizi
+ * @brief Test scripts for the class Population.
+ * @details The script tests the member function for correct behaviour, it also
+ *  tests loading correct, incorrect and non-existing external files to seed
+ *  the population.
  * @version 0.1
  * @date 2018-10-31
  */
@@ -10,8 +14,12 @@
 #include "../include/Cell_Culture/Population.h"
 
 // Test of board size and standard initialization.
-SCENARIO("Using a default population size 80x24 (defined in globals.cpp") {
+SCENARIO("Using a default population size 80x24 (defined in globals.cpp", "[Population]") {
   GIVEN("Default population that is initialized with default rule 'conway'") {
+    // Set globals to default in case other test modified it:
+    WORLD_DIMENSIONS = {80, 24};
+    fileName = "";
+
     Population pop;
     pop.initiatePopulation("conway");
 
@@ -22,10 +30,9 @@ SCENARIO("Using a default population size 80x24 (defined in globals.cpp") {
 }
 
 // Test of initialization with good small population.
-SCENARIO("Using good 5x5 population 'good.txt'") {
-  fileName = "test/populations/good.txt";
-
+SCENARIO("Using good 5x5 population 'good.txt'", "[Population]") {
   GIVEN("Population is initialized by file good.txt with default rule 'conway'") {
+    fileName = "test/populations/good.txt";
     Population pop;
     pop.initiatePopulation("conway");
     
@@ -55,10 +62,9 @@ SCENARIO("Using good 5x5 population 'good.txt'") {
 }
 
 // Test of initialization with good larger population
-SCENARIO("Using good 10x10 population 'good2.txt'") {
-  fileName = "test/populations/good2.txt";
-
+SCENARIO("Using good 10x10 population 'good2.txt'", "[Population]") {
   GIVEN("Population is initialized by file good2.txt with default rule 'conway'") {
+    fileName = "test/populations/good2.txt";
     Population pop;
     pop.initiatePopulation("conway");
     
@@ -88,7 +94,7 @@ SCENARIO("Using good 10x10 population 'good2.txt'") {
 }
 
 // Test with empty file and non-existing file
-SCENARIO("If empty or non-existing file is given error should be thrown") {
+SCENARIO("If empty or non-existing file is given error should be thrown", "[Population]") {
   GIVEN("Empty file is given at program start") {
     fileName = "test/populations/empty.txt";
     Population pop;
@@ -109,7 +115,7 @@ SCENARIO("If empty or non-existing file is given error should be thrown") {
 }
 
 // Test with bad files
-SCENARIO("File with bad/corrupted input is given") {
+SCENARIO("File with bad/corrupted input is given", "[Population]") {
   GIVEN("File with bad input is given at program start") {
     fileName = "test/populations/bad.txt";
     Population pop;

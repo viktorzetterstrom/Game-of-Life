@@ -1,7 +1,12 @@
 /**
  * @file test-cell.cpp
- * @author Viktor Zetterström (vize1500@student.miun.se)
- * @brief Unit tests for the class Cell.
+ * @author Viktor Zetterström
+ * @author Visar Ferizi
+ * @brief Test script for testing the class Cell.
+ * @details The test script creates a standard Cell and check that it has correct
+ *  properties. It then makes changes to see that the cell responds correctly.
+ *  The script also tries supplying additional data during constructing, to
+ *  ensure that the class is functional.
  * @version 0.1
  * @date 2018-10-31
  */
@@ -9,7 +14,7 @@
 #include "../include/Cell_Culture/Cell.h"
 
 // Scenario when using a normal cell object and making changes to it.
-SCENARIO("Using a Cell object") {
+SCENARIO("Using a Cell object", "[Cell]") {
   GIVEN("Standard cell created with default values") {
     Cell cell;
     
@@ -84,7 +89,7 @@ SCENARIO("Using a Cell object") {
 }
 
 // Scenario when using a rim cell.
-SCENARIO("Using a rim cell") {
+SCENARIO("Using a rim cell", "[Cell]") {
   GIVEN("A rim cell") {
     Cell rimCell(true);
 
@@ -126,7 +131,7 @@ SCENARIO("Using a rim cell") {
 }
 
 // Scenario to check constructor working.
-SCENARIO("Using the constructor to create a living cell") {
+SCENARIO("Using the constructor to create a living cell", "[Cell]") {
   GIVEN("We create a living cell") {
     Cell cell(false, GIVE_CELL_LIFE);
 
