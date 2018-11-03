@@ -6,7 +6,7 @@
  * @date 2018-10-31
  */
 
-#include "catch.hpp"
+#include <catch.hpp>
 #include "GoL_Rules/RuleFactory.h"
 #include "GoL_Rules/RuleOfExistence_Conway.h"
 #include "GoL_Rules/RuleOfExistence_Erik.h"
