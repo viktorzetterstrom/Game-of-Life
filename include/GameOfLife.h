@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file GameOfLife.h
  * @author Erik Ström
  * @brief Definition of GameOfLife, main simulation class.
@@ -59,6 +59,11 @@ public:
      *  the population.
      */
     void runSimulation();
+    
+    /**
+     * @brief return the amount in a population.
+     */
+    Population& getPopulation() { return population; };
 
 };
 
