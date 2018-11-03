@@ -40,19 +40,19 @@ SCENARIO("RuleOfExistence_VonNeumann testcase1", "[von_neumann]")
 			RuleOfExistence_VonNeumann* rule = dynamic_cast<RuleOfExistence_VonNeumann*> (test.createAndReturnRule(cells, "von_neumann"));
 			
 			THEN("Cell at position (1, 1) should be dead") {
-				REQUIRE(cells[Point{ 1, 1 }].isAlive() == false);
+				REQUIRE(cells[(Point{ 1, 1 })].isAlive() == false);
 			}
 			THEN("Cell at position (1, 2) should be dead") {
-				REQUIRE(cells[Point{ 1, 2 }].isAlive() == false);
+				REQUIRE(cells[(Point{ 1, 2 })].isAlive() == false);
 			}
 			THEN("Cell at position (2, 1) should be alive") {
-				REQUIRE(cells[Point{ 2, 1 }].isAlive() == true);
+				REQUIRE(cells[(Point{ 2, 1 })].isAlive() == true);
 			}
 			THEN("Cell at position (2, 1) should be 1 year old") {
-				REQUIRE(cells[Point{ 2, 1 }].getAge() == 1);
+				REQUIRE(cells[(Point{ 2, 1 })].getAge() == 1);
 			}
 			THEN("Cell at position (2, 2) should be dead") {
-				REQUIRE(cells[Point{ 2, 2 }].isAlive() == false);
+				REQUIRE(cells[(Point{ 2, 2 })].isAlive() == false);
 			}
 
 			rule->executeRule();
@@ -63,7 +63,7 @@ SCENARIO("RuleOfExistence_VonNeumann testcase1", "[von_neumann]")
 			}
 
 			THEN("Cell at position (2, 1) should be dead") {
-				REQUIRE(cells[Point{ 2, 1 }].isAlive() == false);
+				REQUIRE(cells[(Point{ 2, 1 })].isAlive() == false);
 			}
 		}
 	}
@@ -106,7 +106,7 @@ SCENARIO("RuleOfExistence_VonNeumann testcase2", "[von_neumann]")
 			}
 
 			THEN("Cell at position (2, 1) should be dead") {
-				REQUIRE(cells[Point{ 2, 1 }].isAlive() == false);
+				REQUIRE(cells[(Point{ 2, 1 })].isAlive() == false);
 			}
 		}
 	}

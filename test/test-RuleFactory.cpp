@@ -26,7 +26,7 @@ SCENARIO("Functions of the RuleFactory class", "[RuleFactory]")
 
             THEN("The default RuleOfExistence_Conway should be returned")
             {
-                REQUIRE(conway.getRuleName() == "conway");
+                REQUIRE(conway->getRuleName() == "conway");
             }
         }
 
@@ -36,7 +36,7 @@ SCENARIO("Functions of the RuleFactory class", "[RuleFactory]")
 
             THEN("The return of getRuleName should equal erik")
             {
-                REQUIRE(erik.getRuleName() == "erik");
+                REQUIRE(erik->getRuleName() == "erik");
             }
         }
 
@@ -46,7 +46,7 @@ SCENARIO("Functions of the RuleFactory class", "[RuleFactory]")
 
             THEN("The return of getRuleName should equal von_neumann")
             {
-                REQUIRE(von_neumann.getRuleName() == "von_neumann");
+                REQUIRE(von_neumann->getRuleName() == "von_neumann");
             }
         }
     }
