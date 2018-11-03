@@ -10,7 +10,7 @@
 #include "GoL_Rules/RuleFactory.h"
 #include "GoL_Rules/RuleOfExistence_VonNeumann.h"
 
-SCENARIO("RuleOfExistence_VonNeumann testcase1")
+SCENARIO("RuleOfExistence_VonNeumann testcase1", "[von_neumann]")
 {
 	GIVEN("Spare population upgrade")
 	{
@@ -69,7 +69,7 @@ SCENARIO("RuleOfExistence_VonNeumann testcase1")
 	}
 }
 
-SCENARIO("RuleOfExistence_VonNeumann testcase2")
+SCENARIO("RuleOfExistence_VonNeumann testcase2", "[von_neumann]")
 {
 	GIVEN("Dense population upgrade")
 	{

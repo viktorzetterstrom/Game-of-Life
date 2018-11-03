@@ -19,8 +19,7 @@ Cell::Cell(bool isRimCell, ACTION action) : details({ 0,STATE_COLORS.LIVING, isR
 
 // Updates the cell to its new state, based on stored update values.
 void Cell::updateState() {
-    switch (this->nextUpdate.nextGenerationAction)
-    {
+    switch (this->nextUpdate.nextGenerationAction) {
         case KILL_CELL:
             killCell();
             break;
@@ -34,21 +33,19 @@ void Cell::updateState() {
             break;
     }
 
-	if (!details.rimCell) //if not a rimcell
-	{
-		// should the color be updated
-		if (details.color != nextUpdate.nextColor)
-			setColor(nextUpdate.nextColor);
+    if (!details.rimCell) { //if not a rimcell
+        // should the color be updated
+        if (details.color != nextUpdate.nextColor)
+            setColor(nextUpdate.nextColor);
 
-		// should the value be updated
-		if (details.value != nextUpdate.nextValue)
-			setCellValue(nextUpdate.nextValue);
-	}
-	else
-	{
-		setColor(STATE_COLORS.DEAD);  //if rimcell
+        // should the value be updated
+        if (details.value != nextUpdate.nextValue)
+            setCellValue(nextUpdate.nextValue);
+    } else {
+        setColor(STATE_COLORS.DEAD);  //if rimcell
 
     this->nextUpdate.nextGenerationAction = DO_NOTHING;	// reset next action
+    }
 }
 
 // is the cell alive?

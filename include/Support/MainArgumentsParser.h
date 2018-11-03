@@ -37,7 +37,7 @@ public:
      *
      * @test Given valid arguments, after finding its value, it should return the
      *  reference to an ApplicationValues struct ccorresponding the right argument. If the argument is -h, it should excecute the app directly. 
-     * @bug it does not return warning when passed argument is not found.
+     * @todo it does not return warning when passed argument is not found.
      */
     ApplicationValues& runParser(char* argv[], int length);
 

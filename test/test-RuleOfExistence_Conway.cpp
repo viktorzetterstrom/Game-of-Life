@@ -10,7 +10,7 @@
 #include "GoL_Rules/RuleFactory.h"
 #include "GoL_Rules/RuleOfExistence_Conway.h"
 
-SCENARIO("RuleOfExistence_Conway testcase1")
+SCENARIO("RuleOfExistence_Conway testcase1", "[conway]")
 {
 	GIVEN("Spare population upgrade")
 	{
@@ -69,7 +69,7 @@ SCENARIO("RuleOfExistence_Conway testcase1")
 	}
 }
 
-SCENARIO("RuleOfExistence_Conway testcase2")
+SCENARIO("RuleOfExistence_Conway testcase2", "[conway]")
 {
 	GIVEN("Dense population upgrade")
 	{

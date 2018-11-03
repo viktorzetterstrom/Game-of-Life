@@ -10,7 +10,7 @@
 #include "GoL_Rules/RuleFactory.h"
 #include "GoL_Rules/RuleOfExistence_Erik.h"
 
-SCENARIO("RuleOfExistence_Erik testcase1")
+SCENARIO("RuleOfExistence_Erik testcase1", "[erik]")
 {
 	GIVEN("Spare population upgrade")
 	{
@@ -69,7 +69,7 @@ SCENARIO("RuleOfExistence_Erik testcase1")
 	}
 }
 
-SCENARIO("RuleOfExistence_Erik testcase2")
+SCENARIO("RuleOfExistence_Erik testcase2", "[erik]")
 {
 	GIVEN("Dense population upgrade")
 	{

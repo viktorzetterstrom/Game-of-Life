@@ -11,7 +11,7 @@
 
 /**
  * @addtogroup Structs Data structures
- * @brief structs used in the application to group data together.
+ * @brief Structs used in the application to group data together.
  * @{
  */
 

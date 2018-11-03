@@ -12,7 +12,7 @@
 #include "GoL_Rules/RuleOfExistence.h"
 
 /**
- * @addtogroup Rules Rule functions
+ * @addtogroup Rules Rule classes
  * @brief Functions that decide the rules with which the simulation is run.
  * @{
  */

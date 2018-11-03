@@ -1,6 +1,7 @@
 /**
   * @file RuleOfExistence.cpp
   * @author Erik Ström
+  * @brief Implementation of rule baseclass.
   * @date October 2017
   * @version 0.1
   */

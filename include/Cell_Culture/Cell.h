@@ -32,6 +32,13 @@ const STATE_COLORS = { COLOR::WHITE, COLOR::BLACK, COLOR::CYAN, COLOR::MAGENTA }
  */
 enum ACTION { KILL_CELL, IGNORE_CELL, GIVE_CELL_LIFE, DO_NOTHING };
 
+
+/**
+  * @addtogroup Sim Cell classes
+  * @brief Classes that represent the cells and population of cells in the Game Of Life.
+  * @{
+  */
+
 /**
  * @brief Cells represents a certain combination of row and column of the 
  * simulated world.
@@ -240,6 +247,6 @@ public:
      * @test Test that it returns the next ACTION in the simulation correctly.
      */
     ACTION& getNextGenerationAction() { return nextUpdate.nextGenerationAction; }
-};
+}; /** @} */
 
 #endif

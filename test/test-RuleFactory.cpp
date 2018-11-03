@@ -12,7 +12,7 @@
 #include "GoL_Rules/RuleOfExistence_Erik.h"
 #include "GoL_Rules/RuleOfExistence_VonNeumann.h"
 
-SCENARIO("Functions of the RuleFactory class")
+SCENARIO("Functions of the RuleFactory class", "[RuleFactory]")
 {
     GIVEN("Getting an RuleFactory object by getInstance()")
 

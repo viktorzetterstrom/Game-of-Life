@@ -10,7 +10,7 @@
 #include "../include/Support/FileLoader.h"
 
 // Test of initialization with custom population.
-SCENARIO("Loading good 5x5 cells 'good.txt'") {
+SCENARIO("Loading good 5x5 cells 'good.txt'", "[FileLoader]") {
 	fileName = "../test/populations/good.txt";
 
 	GIVEN("Cells loaded from file good.txt") {
