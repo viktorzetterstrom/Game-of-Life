@@ -16,8 +16,9 @@
 #include <iostream>
 #include "Support/MainArgumentsParser.h"
 
+// Om win, använd _strdup istället för strdup
 #ifdef _WIN32
-  typedef _strdup strdup
+  #define strdup _strdup
 #endif
 
 
