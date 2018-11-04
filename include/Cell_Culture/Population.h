@@ -20,6 +20,12 @@
 using namespace std;
 
 /**
+  * @addtogroup Sim Cell classes
+  * @brief Classes that represent the cells and population of cells in the Game Of Life.
+  * @{
+  */
+
+/**
  * @brief Representation of the complete society of cell existence and 
  * interactions.
  * 
@@ -130,6 +136,6 @@ public:
      */
     int getTotalCellPopulation() { return cells.size(); }
 
-};
+}; /** @} */
 
 #endif

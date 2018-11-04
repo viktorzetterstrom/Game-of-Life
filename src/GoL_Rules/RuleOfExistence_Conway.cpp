@@ -1,6 +1,7 @@
 /**
   * @file RuleOfExistence_Conway.cpp 
   * @author Erik Ström
+  * @brief Implementation of conway rule class
   * @date October 2017
   * @version 0.1
   */

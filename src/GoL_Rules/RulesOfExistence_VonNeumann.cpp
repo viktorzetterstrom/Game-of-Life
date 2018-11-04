@@ -1,6 +1,7 @@
 /**
   * @file RuleOfExistence_VonNeumann.cpp
   * @author Erik Ström
+  * @brief Implementation of von_neumann rule class.
   * @date October 2017
   * @version 0.1
   */

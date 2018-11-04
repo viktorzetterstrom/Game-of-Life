@@ -6,11 +6,11 @@
  * @date 2018-10-02
  */
 
-#include "catch.hpp"
+#include <catch.hpp>
 #include "GoL_Rules/RuleFactory.h"
 #include "GoL_Rules/RuleOfExistence_Conway.h"
 
-SCENARIO("RuleOfExistence_Conway testcase1")
+SCENARIO("RuleOfExistence_Conway testcase1", "[conway]")
 {
 	GIVEN("Spare population upgrade")
 	{
@@ -40,19 +40,19 @@ SCENARIO("RuleOfExistence_Conway testcase1")
 			RuleOfExistence_Conway* rule = dynamic_cast<RuleOfExistence_Conway*> (test.createAndReturnRule(cells, "conway"));
 			
 			THEN("Cell at position (1, 1) should be dead") {
-				REQUIRE(cells[Point{ 1, 1 }].isAlive() == false);
+				REQUIRE(cells[(Point{ 1, 1 })].isAlive() == false);
 			}
 			THEN("Cell at position (1, 2) should be dead") {
-				REQUIRE(cells[Point{ 1, 2 }].isAlive() == false);
+				REQUIRE(cells[(Point{ 1, 2 })].isAlive() == false);
 			}
 			THEN("Cell at position (2, 1) should be alive") {
-				REQUIRE(cells[Point{ 2, 1 }].isAlive() == true);
+				REQUIRE(cells[(Point{ 2, 1 })].isAlive() == true);
 			}
 			THEN("Cell at position (2, 1) should be 1 year old") {
-				REQUIRE(cells[Point{ 2, 1 }].getAge() == 1);
+				REQUIRE(cells[(Point{ 2, 1 })].getAge() == 1);
 			}
 			THEN("Cell at position (2, 2) should be dead") {
-				REQUIRE(cells[Point{ 2, 2 }].isAlive() == false);
+				REQUIRE(cells[(Point{ 2, 2 })].isAlive() == false);
 			}
 
 			rule->executeRule();
@@ -63,13 +63,13 @@ SCENARIO("RuleOfExistence_Conway testcase1")
 			}
 
 			THEN("Cell at position (2, 1) should be dead") {
-				REQUIRE(cells[Point{ 2, 1 }].isAlive() == false);
+				REQUIRE(cells[(Point{ 2, 1 })].isAlive() == false);
 			}
 		}
 	}
 }
 
-SCENARIO("RuleOfExistence_Conway testcase2")
+SCENARIO("RuleOfExistence_Conway testcase2", "[conway]")
 {
 	GIVEN("Dense population upgrade")
 	{
@@ -106,14 +106,14 @@ SCENARIO("RuleOfExistence_Conway testcase2")
 			}
 
 			THEN("Cell at position (2, 1) should be alive") {
-				REQUIRE(cells[Point{ 2, 1 }].isAlive() == true);
+				REQUIRE(cells[(Point{ 2, 1 })].isAlive() == true);
 			}
 			THEN("Cell at position (2, 1) should be 2 year old") {
-				REQUIRE(cells[Point{ 2, 1 }].getAge() == 2);
+				REQUIRE(cells[(Point{ 2, 1 })].getAge() == 2);
 			}
 
 			THEN("Cell at position (2, 2) should be alive") {
-				REQUIRE(cells[Point{ 2, 2 }].isAlive() == true);
+				REQUIRE(cells[(Point{ 2, 2 })].isAlive() == true);
 			}
 		}
 	}

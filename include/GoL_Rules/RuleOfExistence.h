@@ -17,11 +17,10 @@ using namespace std;
 
 
 /**
-  * @addtogroup Rules Rule functions
-  * @brief Functions that decide the rules with which the simulation is run.
+  * @addtogroup Structs Data structures
+  * @brief Structs used in the application to group data together.
   * @{
   */
-
 
 /**
   *@struct PopulationLimits
@@ -39,7 +38,7 @@ struct PopulationLimits {
   */
 struct Directions {
     int HORIZONTAL, VERTICAL;
-};
+}; /** @} */
 
 /**
   *@brief Vector containing all possible directions (neighbouring cells)
@@ -58,6 +57,13 @@ const vector<Directions> CARDINAL{ { 0,-1 },{ 1,0 },{ 0,1 },{ -1,0 } };
   *@details Directions NE, SE, SW, NW
   */
 const vector<Directions> DIAGONAL{ { 1,-1 },{ 1,1 },{ -1,1 },{ -1,-1 } };
+
+/**
+  * @addtogroup Rules Rule classes
+  * @brief Functions that decide the rules with which the simulation is run.
+  * @{
+  */
+
 
 /**
   *@class RuleOfExistence

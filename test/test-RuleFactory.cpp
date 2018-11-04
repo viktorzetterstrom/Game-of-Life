@@ -6,13 +6,13 @@
  * @date 2018-10-31
  */
 
-#include "catch.hpp"
+#include <catch.hpp>
 #include "GoL_Rules/RuleFactory.h"
 #include "GoL_Rules/RuleOfExistence_Conway.h"
 #include "GoL_Rules/RuleOfExistence_Erik.h"
 #include "GoL_Rules/RuleOfExistence_VonNeumann.h"
 
-SCENARIO("Functions of the RuleFactory class")
+SCENARIO("Functions of the RuleFactory class", "[RuleFactory]")
 {
     GIVEN("Getting an RuleFactory object by getInstance()")
 
@@ -26,7 +26,7 @@ SCENARIO("Functions of the RuleFactory class")
 
             THEN("The default RuleOfExistence_Conway should be returned")
             {
-                REQUIRE(conway.getRuleName() == "conway");
+                REQUIRE(conway->getRuleName() == "conway");
             }
         }
 
@@ -36,7 +36,7 @@ SCENARIO("Functions of the RuleFactory class")
 
             THEN("The return of getRuleName should equal erik")
             {
-                REQUIRE(erik.getRuleName() == "erik");
+                REQUIRE(erik->getRuleName() == "erik");
             }
         }
 
@@ -46,7 +46,7 @@ SCENARIO("Functions of the RuleFactory class")
 
             THEN("The return of getRuleName should equal von_neumann")
             {
-                REQUIRE(von_neumann.getRuleName() == "von_neumann");
+                REQUIRE(von_neumann->getRuleName() == "von_neumann");
             }
         }
     }

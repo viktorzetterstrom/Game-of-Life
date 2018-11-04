@@ -1,6 +1,7 @@
 /**
   * @file RuleOfExistence_Erik.cpp
   * @author Erik Ström
+  * @brief Implementation of erik rule class.
   * @date October 2017
   * @version 0.1
   */

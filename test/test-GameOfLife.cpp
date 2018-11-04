@@ -10,8 +10,8 @@
 #include "../include/GameOfLife.h"
 
 // Test of initialization with custom population.
-SCENARIO("Run game on good 5x5 cells 'good.txt'") {
-	fileName = "../test/populations/good.txt";
+SCENARIO("Run game on good 5x5 cells 'good.txt'", "[GameOfLife]") {
+	fileName = "test/populations/good.txt";
 
 	GIVEN("Cells loaded from file good.txt") {
 		GameOfLife gameOfLife = GameOfLife(5, "conway", "erik");

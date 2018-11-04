@@ -2,7 +2,7 @@ This is an implementation of [John Conway's Game of Life](https://en.wikipedia.o
 
 # Instructions
 ## How to build the program
-The program is built using CMake and the CMakeLists.txt file. If CMake is installed on your system, just navigate to the project folder and use CMake to build.
+First just clone the repo from bitbucket. The program is built using CMake and the CMakeLists.txt file. If CMake is installed on your system, just navigate to the project folder and use CMake to build. To run the tests the framework Catch is needed, in the project it is included in the path $tools_include, but you can include it any way you want, but you might have to do some slight alterations.
 
 ## How to run the program
 The program is run using the terminal, navigate to the folder where you build the project and type `%GameOfLife` to run.
