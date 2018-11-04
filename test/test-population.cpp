@@ -32,7 +32,13 @@ SCENARIO("Using a default population size 80x24 (defined in globals.cpp", "[Popu
 // Test of initialization with good small population.
 SCENARIO("Using good 5x5 population 'good.txt'", "[Population]") {
   GIVEN("Population is initialized by file good.txt with default rule 'conway'") {
-    fileName = "test/populations/good.txt";
+    // Compability for windows build.
+    #ifdef _WIN32
+      fileName = "../test/populations/good.txt";
+    #else
+      fileName = "test/populations/good.txt";
+    #endif
+    
     Population pop;
     pop.initiatePopulation("conway");
     
@@ -64,7 +70,13 @@ SCENARIO("Using good 5x5 population 'good.txt'", "[Population]") {
 // Test of initialization with good larger population
 SCENARIO("Using good 10x10 population 'good2.txt'", "[Population]") {
   GIVEN("Population is initialized by file good2.txt with default rule 'conway'") {
-    fileName = "test/populations/good2.txt";
+    // Compability for windows build.
+    #ifdef _WIN32
+      fileName = "../test/populations/good2.txt";
+    #else
+      fileName = "test/populations/good2.txt";
+    #endif
+
     Population pop;
     pop.initiatePopulation("conway");
     
@@ -96,7 +108,13 @@ SCENARIO("Using good 10x10 population 'good2.txt'", "[Population]") {
 // Test with empty file and non-existing file
 SCENARIO("If empty or non-existing file is given error should be thrown", "[Population]") {
   GIVEN("Empty file is given at program start") {
-    fileName = "test/populations/empty.txt";
+    // Compability for windows build.
+    #ifdef _WIN32
+      fileName = "../test/populations/empty.txt";
+    #else
+      fileName = "test/populations/empty.txt";
+    #endif
+
     Population pop;
     
     THEN("Error should be thrown when initializing the population") {
@@ -117,7 +135,13 @@ SCENARIO("If empty or non-existing file is given error should be thrown", "[Popu
 // Test with bad files
 SCENARIO("File with bad/corrupted input is given", "[Population]") {
   GIVEN("File with bad input is given at program start") {
-    fileName = "test/populations/bad.txt";
+    // Compability for windows build.
+    #ifdef _win32
+      fileName = "../test/populations/bad.txt";
+    #else
+      fileName = "test/populations/bad.txt";
+    #endif
+
     Population pop;
     
     THEN("Error should be thrown when initializing the population") {
@@ -126,7 +150,12 @@ SCENARIO("File with bad/corrupted input is given", "[Population]") {
   }
 
   GIVEN("File with another bad input is given at program start") {
-    fileName = "test/populations/bad2.txt";
+    #ifdef _win32
+      fileName = "../test/populations/bad2.txt";
+    #else
+      fileName = "test/populations/bad2.txt";
+    #endif
+
     Population pop;
     
     THEN("Error should be thrown when initializing the population") {

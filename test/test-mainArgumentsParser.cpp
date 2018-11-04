@@ -12,7 +12,13 @@
 
 #include <catch.hpp>
 #include <string>
+#include <fstream>
+#include <iostream>
 #include "Support/MainArgumentsParser.h"
+
+#ifdef _WIN32
+  typedef _strdup strdup
+#endif
 
 
 SCENARIO("Testing MainArgumentsParser", "[MainArgumentsParser]") {

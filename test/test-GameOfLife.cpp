@@ -11,7 +11,11 @@
 
 // Test of initialization with custom population.
 SCENARIO("Run game on good 5x5 cells 'good.txt'", "[GameOfLife]") {
-	fileName = "test/populations/good.txt";
+	#ifdef _WIN32
+		fileName = "../test/populations/good.txt";
+	#else
+		fileName = "test/populations/good.txt";
+	#endif
 
 	GIVEN("Cells loaded from file good.txt") {
 		GameOfLife gameOfLife = GameOfLife(5, "conway", "erik");
